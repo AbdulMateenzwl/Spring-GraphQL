@@ -3,8 +3,21 @@ type Query {
   getBook(bookId: Int): Book
 }
 
+type Mutation{
+    createBook(book:BookInput):Book
+}
+
 type Book {
   id: ID!
+  title: String
+  desc: String
+  author: String
+  price: Float
+  pages: Int
+}
+
+
+input BookInput{
   title: String
   desc: String
   author: String
